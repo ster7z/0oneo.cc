@@ -1,0 +1,234 @@
+html body {
+    font-family: "Montserrat", sans-serif, "FontAwesome";
+    margin: 0px;
+    padding: 0px;
+}
+
+/* headers */
+
+.header-main {
+    height: 100vh;
+}
+
+.banner {
+    display: flex;
+    height: 94%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+}
+
+.navbars {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.container-fluid a {
+    font-weight: 500;
+}
+
+.title-con {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#ttlet {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#extends {
+    width: 44vh;
+}
+
+.title-con button {
+    margin-top: 15px;
+}
+
+#button-custom {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+#button-custom:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#button-custom:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+#button-custom::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+#button-custom:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.photo-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo {
+    border-radius: 10%;
+    width: 30vh;
+}
+
+/* end headers */
+
+/* projects */
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* end projects */
+
+/* footer */
+
+.footers-main {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footers-sosmed {
+    list-style: none;
+}
+
+/* end footer */
+
+/* animation */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fades-up {
+    /* opacity: 0; */
+    /* transform: translateY(40px); */
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.fades-down {
+    /* opacity: 0; */
+    /* transform: translateY(40px); */
+    animation: fadeDown 1.3s ease forwards;
+}
+
+@media screen and (max-width: 992px) {
+    .photo-con {
+        display: none;
+    }
+    .container-fluid {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+    }
+    .dropdown:focus .dropdown-menu {
+        display: block !important;
+    }
+    .dropdown .dropdown-menu.show {
+        display: none !important;
+    }
+}
